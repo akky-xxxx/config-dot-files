@@ -10,6 +10,13 @@ alias ya='yarn add'
 alias yad='yarn add -D'
 alias yr='yarn remove'
 
+# docker
+alias d-c='docker-compose'
+alias di='docker image'
+alias dc='docker container'
+alias dl='docker logs'
+alias dp='docker ps'
+
 # git commands
 alias gd='git diff' # `git diff`の確認
 alias gaa='git add .' # stage に全追加
