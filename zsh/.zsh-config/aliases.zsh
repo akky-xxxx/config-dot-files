@@ -5,6 +5,11 @@ alias port='lsof -i -P | grep $@' # ポートのプロセスID取得
 alias kp='kill -9 $@' # ポートキル
 alias avni='npm i -g avn avn-nodebrew avn-n avn-nvm && avn setup'
 
+# yarn
+alias ya='yarn add'
+alias yad='yarn add -D'
+alias yr='yarn remove'
+
 # git commands
 alias gd='git diff' # `git diff`の確認
 alias gaa='git add .' # stage に全追加
