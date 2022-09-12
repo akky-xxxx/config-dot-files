@@ -56,7 +56,7 @@ zle -N peco_insert_history
 # }}}
 
 function peco-history-selection() {
-    BUFFER=`history -n 1 | peco`
+    BUFFER=`history 1 | sort -r | sed 's/^[ ]*[0-9]*//g' | peco`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
