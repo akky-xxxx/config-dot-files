@@ -3,9 +3,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/shogo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shogo/google-cloud-sdk/path.zsh.inc'; fi
 
