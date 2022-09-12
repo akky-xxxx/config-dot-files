@@ -13,7 +13,7 @@ function peco-git-log() {
     BUFFER+=$cid
 }
 zle -N peco-git-log
-bindkey '^xl' peco-git-log
+bindkey '^l;' peco-git-log
 
 # 一度でも cd したことのあるディレクトリに効率よく cd する設定
 # cd 履歴を記録
