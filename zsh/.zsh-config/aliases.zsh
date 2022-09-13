@@ -41,3 +41,6 @@ alias -g L='`git log --oneline | peco | sed -e "s/\([a-z0-9]\{7\}\).*/\1/"`'
 # node_modules を削除して npm install / yarn し直し
 alias npmre='mv -f node_modules ~/.Trash/node_modules_`date "+%Y%m%d%H%M%S"` & npm i'
 alias yarnre='mv -f node_modules ~/.Trash/node_modules_`date "+%Y%m%d%H%M%S"` & yarn'
+
+# zsh config の更新
+alias src='source ~/.zshrc'
