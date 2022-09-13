@@ -1,8 +1,7 @@
 # common
 alias mkdir='mkdir -p'
 alias gb='cd ../ && cd -'
-alias port='lsof -i -P | grep $@' # ポートのプロセスID取得
-alias kp='kill -9 $@' # ポートキル
+alias kp='lsof -i -P | peco --prompt "input port>" | sed -e "s/^[^ ]*[ ]*\([0-9]*\).*/\1/" | xargs -n1 kill -9' # ポートキル
 
 # yarn
 alias ya='yarn add'
