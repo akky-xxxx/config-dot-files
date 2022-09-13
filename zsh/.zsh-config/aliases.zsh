@@ -3,7 +3,6 @@ alias mkdir='mkdir -p'
 alias gb='cd ../ && cd -'
 alias port='lsof -i -P | grep $@' # ポートのプロセスID取得
 alias kp='kill -9 $@' # ポートキル
-alias avni='npm i -g avn avn-nodebrew avn-n avn-nvm && avn setup'
 
 # yarn
 alias ya='yarn add'
