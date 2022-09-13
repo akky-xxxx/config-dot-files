@@ -1,7 +1,7 @@
 # common
 alias mkdir='mkdir -p'
 alias gb='cd ../ && cd -'
-alias kp='lsof -i -P | peco --layout=bottom-up --prompt "input port>" | sed -e "s/^[^ ]*[ ]*\([0-9]*\).*/\1/" | xargs -n1 kill -9' # ポートキル
+alias kp='lsof -i -P | fzf | sed -e "s/^[^ ]*[ ]*\([0-9]*\).*/\1/" | xargs -n1 kill -9' # ポートキル
 
 # yarn
 alias ya='yarn add'
@@ -32,9 +32,9 @@ alias grh='git reset --hard'
 alias gp='git push'
 alias gpo='git push -u origin $@'
 # branch list の表示、選択
-alias -g B='`git branch | peco --layout=bottom-up --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+alias -g B='`git branch | fzf | head -n 1 | sed -e "s/^\*\s*//g"`'
 # log list の表示、ハッシュの選択
-alias -g L='`git log --oneline | peco --layout=bottom-up | sed -e "s/\([a-z0-9]\{7\}\).*/\1/"`'
+alias -g L='`git log --oneline | fzf | sed -e "s/\([a-z0-9]\{7\}\).*/\1/"`'
 
 # node_modules を削除して npm install / yarn し直し
 alias npmre='mv -f node_modules ~/.Trash/node_modules_`date "+%Y%m%d%H%M%S"` & npm i'
