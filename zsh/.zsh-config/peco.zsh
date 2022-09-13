@@ -7,14 +7,6 @@ alias cb="peco-git-branches"
 # zle -N peco-git-branches
 # bindkey '^xb' peco-git-branches
 
-## Filter git commit id from log
-function peco-git-log() {
-    local cid=$(git log --oneline | peco | awk '{ print $1 }')
-    BUFFER+=$cid
-}
-zle -N peco-git-log
-bindkey '^l;' peco-git-log
-
 # 一度でも cd したことのあるディレクトリに効率よく cd する設定
 # cd 履歴を記録
 typeset -U chpwd_functions
