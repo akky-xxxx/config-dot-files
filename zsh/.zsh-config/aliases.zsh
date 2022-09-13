@@ -33,6 +33,7 @@ alias gcp='git cherry-pick $@'
 alias grh='git reset --hard'
 alias gp='git push'
 alias gpo='git push -u origin $@'
+# branch list の表示、選択
 alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
 # log list の表示、ハッシュの選択
 alias -g L='`git log --oneline | peco | sed -e "s/\([a-z0-9]\{7\}\).*/\1/"`'
