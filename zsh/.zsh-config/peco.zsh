@@ -22,7 +22,7 @@ function peco_get_destination_from_history() {
     sort ${CD_HISTORY_FILE} | uniq -c | sort -r | \
         sed -e 's/^[ ]*[0-9]*[ ]*//' | \
         sed -e s"/^${HOME//\//\\/}/~/" | \
-        peco | xargs echo
+        peco --layout=bottom-up | xargs echo
 }
 
 # peco を使って cd 履歴の中からディレクトリを選択し cd するウィジェット
@@ -48,7 +48,7 @@ zle -N peco_insert_history
 # }}}
 
 function peco-history-selection() {
-    BUFFER=`history 1 | sort -r | sed 's/^[ ]*[0-9]*//g' | peco`
+    BUFFER=`history 1 | sort -r | sed 's/^[ ]*[0-9]*//g' | peco --layout=bottom-up`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
