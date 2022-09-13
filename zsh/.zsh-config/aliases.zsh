@@ -34,6 +34,8 @@ alias grh='git reset --hard'
 alias gp='git push'
 alias gpo='git push -u origin $@'
 alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+# log list の表示、ハッシュの選択
+alias -g L='`git log --oneline | peco | sed -e "s/\([a-z0-9]\{7\}\).*/\1/"`'
 
 # node_modules を削除して npm install / yarn し直し
 alias npmre='mv -f node_modules ~/.Trash/node_modules_`date "+%Y%m%d%H%M%S"` & npm i'
