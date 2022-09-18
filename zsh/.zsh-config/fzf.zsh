@@ -48,7 +48,7 @@ zle -N fzf_insert_history
 # }}}
 
 function fzf-history-selection() {
-    BUFFER=`history 1 | sort -r | sed 's/^[ ]*[0-9]*//g' | fzf`
+    BUFFER=`history 1 | sort -r | sed -E 's/^[ ]*[0-9]*\*?[ ]*//g' | fzf`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
