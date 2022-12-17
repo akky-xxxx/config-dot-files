@@ -115,7 +115,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Auto set to 'off' on dumb terminals.
 # zstyle ':prezto:module:prompt' theme 'sorin'
 # zstyle ':prezto:module:prompt' theme 'powerline'
-zstyle ':prezto:module:prompt' theme 'pws'
+zstyle ':prezto:module:prompt' theme 'adam2'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
