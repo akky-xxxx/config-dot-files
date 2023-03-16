@@ -30,7 +30,8 @@ alias gf='git fetch'
 alias gcp='git cherry-pick $@'
 alias grh='git reset --hard'
 alias gp='git push'
-alias gpo='git push -u origin $@'
+alias gpo='git push -u origin B'
+alias gco='git checkout B'
 # branch list の表示、選択
 alias -g B='`git branch | fzf | head -n 1 | sed -e "s/^\*\s*//g"`'
 # log list の表示、ハッシュの選択
